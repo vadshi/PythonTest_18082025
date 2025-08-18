@@ -1,4 +1,4 @@
-'''
+"""
 Задача №1
 Вход:
 Пользователь должен ввести 'правильный' пароль, состоящий из:
@@ -35,10 +35,4 @@ special = '_!@#$%^&'
 пароль подходит -> o58anuahaunH!
 пароль подходит -> aaaAAA111!!!
 пароль не подходит -> saucacAusacu8
-'''
-
-import string as st
-
-print(st.digits)
-print(st.ascii_lowercase)
-print(st.ascii_uppercase)
+"""
