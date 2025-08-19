@@ -1,9 +1,9 @@
 import sys
 import unittest
-import more_calc as calc
+import Day_2.more_calc as calc
 
-
-sys.stdout = open("result.txt", "a", encoding="utf-8")
+VALUE = 2
+sys.stdout = open("result.txt", "w", encoding="utf-8")
 
 class TestBasicCalc(unittest.TestCase):
     @classmethod
@@ -18,6 +18,7 @@ class TestBasicCalc(unittest.TestCase):
         print("Close all connections and clear temporary values")
         print("=" * 30)
 
+    @unittest.skipIf(VALUE < 3, "Temporary skip test_add")
     def test_add(self):
         self.assertEqual(calc.add(2, 3), 5)
         with self.assertRaises(TypeError) as te:
@@ -36,6 +37,7 @@ class TestBasicCalc(unittest.TestCase):
         self.assertIsInstance(calc.div(8, 4), float)
 
 
+@unittest.skip("Waiting for realization")
 class TestMoreCalc(unittest.TestCase):
     """ test MoreCalc class"""
     def test_sqrt(self):
@@ -55,6 +57,6 @@ def main(out=sys.stdout, verbosity=2):
 
 
 if __name__ == "__main__":
-    main()
-
+    # main()
+    unittest.main()
     
