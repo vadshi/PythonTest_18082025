@@ -1,6 +1,6 @@
-from pprint import pprint
 # Пример класа-декоратора
 # from functools import total_ordering
+# from pprint import pprint
 
 s1 = 'hello'
 s2 = 'python'
@@ -53,3 +53,14 @@ print(func_sum)
 # Использование функции-декоратора без синтаксического сахара
 # func_sum_usd = rub_to_usd(func_sum)
 # print(func_sum_usd(100, 10))
+
+# Было
+# my_func = lambda x: x ** 2 + 3 * x + 100 
+
+# Стало
+def my_func(x: int) -> int:
+    return x ** 2 + 3 * x + 100
+
+
+print(my_func(1))
+# print(my_func("100")) # error
