@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "tasks"
+authors = [{name = "user", email = "user@mail.com"}]
+readme = "README.md"
+requires-python=">=3.7"
+dynamic = ["version", "description"]
+
+classifiers = [
+  "Programming Language :: Python"
+]
+
+dependencies = [
+    "tinydb==4.5.1",
+    "typer==0.3.2",
+    "rich==10.7.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "faker",
+    "tox",
+    "coverage",
+    "pytest-cov",
+]
+
+[project.scripts]
+tasks = "tasks:app"
+
