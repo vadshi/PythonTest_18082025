@@ -1,5 +1,5 @@
 import unittest
-import Day_2.encode_decode as ed
+import Day_2.Solutions.encode_decode as ed
 
 
 class TestEncodeDecode(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from decrypt import decrypt
+from Day_2.Solutions.decrypt import decrypt
 
 
 class TestDecrypt(unittest.TestCase):

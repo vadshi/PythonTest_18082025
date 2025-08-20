@@ -38,7 +38,7 @@ def encode(string: str) -> str:
     char_dict = get_chars_w_digits()
     result = ''
     for char in string:
-        if char not in st.ascii_lowercase:
+        if char not in st.ascii_lowercase + ' ':
             raise ValueError('invalid symbol in string')
         result += char_dict[char] 
     return result
