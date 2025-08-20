@@ -3,7 +3,7 @@ import os
 from io import StringIO
 import pathlib
 import rich
-from rich.table import Table
+from rich.table import Table # type: ignore
 from contextlib import contextmanager
 from typing import List
 
@@ -50,7 +50,7 @@ def list_tasks(
     """
     with tasks_db() as db:
         the_tasks = db.list_tasks(owner=owner, state=state)
-        table = Table(box=rich.box.SIMPLE)
+        table = Table(box=rich.box.SIMPLE) # type: ignore
         table.add_column("ID")
         table.add_column("state")
         table.add_column("owner")
