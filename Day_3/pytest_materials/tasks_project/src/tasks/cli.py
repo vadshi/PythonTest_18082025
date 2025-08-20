@@ -128,7 +128,7 @@ def get_path():
     if db_path_env:
         db_path = pathlib.Path(db_path_env)
     else:
-        db_path = pathlib.Path.cwd() / "tasks_store"
+        db_path = pathlib.Path.home() / "tasks_store"
     return db_path
 
 
