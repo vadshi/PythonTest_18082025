@@ -9,7 +9,7 @@ def test_homepage_view(home_response):
     view = resolve(url)
 
     assert home_response.status_code == 200 # OK
-    assert view.func.view_class == HomePageView
+    assert view.func.view_class == HomePageView # type: ignore
 
     assertContains(home_response, "Hello students!")
     assertNotContains(home_response, "Hi! Absent info")
