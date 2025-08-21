@@ -19,9 +19,9 @@ def test_book_list_view(book_list_response):
 
 
 @pytest.mark.django_db
-def test_book_list_view_context(book_list_response):
+def test_book_list_view_context(book, book_list_response):
     assert "books" in book_list_response.context
-    assert len(book_list_response["books"]) == 1
+    assert len(book_list_response.context["books"]) == 1
 
 
 
@@ -41,4 +41,4 @@ def test_book_detail_view(book, book_detail_response):
 @pytest.mark.django_db
 def test_book_detail_view_context(book, book_detail_response):
     assert "book" in book_detail_response.context
-    assert book_detail_response["book"] == book
+    assert book_detail_response.context["book"] == book
