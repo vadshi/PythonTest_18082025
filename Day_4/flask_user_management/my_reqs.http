@@ -1,0 +1,9 @@
+@host = http://127.0.0.1
+@port = :5000
+
+### Get users
+GET {{host}}{{port}}/users HTTP/1.1
+
+
+### Get root url
+GET {{host}}{{port}}/ HTTP/1.1

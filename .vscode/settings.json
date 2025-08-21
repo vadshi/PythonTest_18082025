@@ -1,7 +1,12 @@
 {
     "python.testing.unittestArgs": [
         "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
     ],
     "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": false,
+    "python.testing.cwd": "${workspaceFolder}/Day_3/django_project"
 }
