@@ -8,7 +8,7 @@ from models import db
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--dburl", # For Postgres use "postgres://user:password@host/dbname"
+        "--dburl", # For Postgres use "postgresql://user:password@host/dbname"
         action="store",
         default="sqlite:///:memory:", # Default use SQLite in-memory database,
         help="Database URL use to tests",
@@ -52,7 +52,7 @@ def app(db_url):
 
         # Close the database session and drop all tables after the session
         db.session.remove()
-        db.drop_all()
+        # db.drop_all()
 
 
 @pytest.fixture

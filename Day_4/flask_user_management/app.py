@@ -12,7 +12,7 @@ def create_app(app_config=None):
 
     # Get database URI from environment variables or use default
     # To create in memory: "sqlite:///:memory:"
-    DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///./test_db") # 
+    DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///:memory:") # maybe so: "sqlite:///./test_db"
 
     if app_config:
         app.config.update(app_config)

@@ -8,5 +8,10 @@
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
-    "python.testing.cwd": "${workspaceFolder}/Day_3/django_project"
+    "python.testing.cwd": "${workspaceFolder}/Day_5/app_example/",
+    "python.testing.pytestArgs": [
+        "-v",
+        "-s",
+        "tests/"
+    ]
 }
