@@ -2,8 +2,8 @@ import pytest
 import random
 from sqlalchemy import StaticPool, create_engine
 from sqlalchemy.exc import OperationalError as SQLAlchemyOperationalError
-from flask_user_management.app import create_app
-from flask_user_management.models import db
+from app import create_app
+from models import db
 
 
 def pytest_addoption(parser):

@@ -2,7 +2,7 @@ import json
 
 
 def test_add_user(test_client, user_payload):
-    response = test_client.get(
+    response = test_client.post(
         "/users", data=json.dumps(user_payload), content_type = "application/json"
     )
 
