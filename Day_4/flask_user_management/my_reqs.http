@@ -1,9 +1,21 @@
 @host = http://127.0.0.1
 @port = :5000
 
-### Get users
-GET {{host}}{{port}}/users HTTP/1.1
-
 
 ### Get root url
 GET {{host}}{{port}}/ HTTP/1.1
+
+
+### Get users
+GET {{host}}{{port}}/users HTTP/1.1
+
+### Create new user
+POST {{host}}{{port}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "user2",
+    "email": "user2@mail.com"
+}
+
+
