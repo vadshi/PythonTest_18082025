@@ -11,7 +11,7 @@ from app.main import app, get_db_session
 engine = create_engine(
     "sqlite:///:memory:",
     poolclass=StaticPool,
-    connect_args={"check_same_threads": False}
+    connect_args={"check_same_thread": False}
 )
 
 Base.metadata.create_all(bind=engine)  # Create tables
