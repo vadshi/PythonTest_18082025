@@ -23,4 +23,4 @@ engine = create_engine(DATABASE_URL)
 
 Base.metadata.create_all(bind=engine)
 
-session_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
